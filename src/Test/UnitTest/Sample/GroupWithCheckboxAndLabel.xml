@@ -2,7 +2,7 @@
   <ribbon startFromScratch="false">
     <contextualTabs>
       <tabSet idMso="TabSetPivotTableTools">
-        <tab id="tab1" label="Internal">
+        <tab id="tab1" label="Internal" getVisible="GetVisible">
           <group id="printSettingsGroup" label="Print settings" getVisible="GetVisible">
             <checkBox id="centerHorizontal" label="Center Horizontal" getEnabled="GetEnabled" getVisible="GetVisible" onAction="OnActionPressed" getPressed="GetPressed" tag="centerHorizontal" screentip="Center Content Horizontally" />
             <checkBox id="centerVertical" label="Center Vertical" getEnabled="GetEnabled" getVisible="GetVisible" onAction="OnActionPressed" getPressed="GetPressed" tag="centerVertical" screentip="Center Content Vertically" />

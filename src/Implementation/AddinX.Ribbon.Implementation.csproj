@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AddinX.Ribbon.Implementation</RootNamespace>
     <AssemblyName>AddinX.Ribbon.Implementation</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AddinX.Ribbon.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AddinX.Ribbon.Contract.1.0.0\lib\net451\AddinX.Ribbon.Contract.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +43,15 @@
     <Compile Include="Command\DialogBoxLauncherCommand.cs" />
     <Compile Include="Command\DropDownCommand.cs" />
     <Compile Include="Command\GalleryCommand.cs" />
+    <Compile Include="Command\TabCommand.cs" />
     <Compile Include="Command\GroupCommand.cs" />
     <Compile Include="Command\MenuCommand.cs" />
+    <Compile Include="Command\SplitButtonCommand.cs" />
     <Compile Include="Control\AddInElement.cs" />
     <Compile Include="Control\AddInList.cs" />
     <Compile Include="Control\Box.cs" />
     <Compile Include="Control\ButtonGroup.cs" />
+    <Compile Include="Control\ButtonUnsizeSplitButton.cs" />
     <Compile Include="Control\ButtonUnsize.cs" />
     <Compile Include="Control\Button.cs" />
     <Compile Include="Control\Checkbox.cs" />
@@ -66,6 +66,9 @@
     <Compile Include="Control\Items.cs" />
     <Compile Include="Control\Item.cs" />
     <Compile Include="Control\LabelControl.cs" />
+    <Compile Include="Control\MenuUnsizeSplitButton.cs" />
+    <Compile Include="Control\SplitButtonUnsize.cs" />
+    <Compile Include="Control\SplitButton.cs" />
     <Compile Include="Control\MenuSeparator.cs" />
     <Compile Include="Control\Menu.cs" />
     <Compile Include="Control\Separator.cs" />
@@ -77,6 +80,7 @@
     <Compile Include="Command\SeparatorCommand.cs" />
     <Compile Include="Command\ToggleButtonCommand.cs" />
     <Compile Include="Control\MenuUnsize.cs" />
+    <Compile Include="Control\ToggleButtonUnsizeSplitButton.cs" />
     <Compile Include="RibbonBuilder.cs" />
     <Compile Include="CustomUi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,7 +98,10 @@
     <Compile Include="Ribbon\Tab.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Contract\AddinX.Ribbon.Contract.csproj">
+      <Project>{8e0452bb-994c-4996-99fa-931ee5b7e661}</Project>
+      <Name>AddinX.Ribbon.Contract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

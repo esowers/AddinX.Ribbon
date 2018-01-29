@@ -96,6 +96,13 @@ namespace AddinX.Ribbon.Implementation
             return cmd;
         }
 
+        public IGroupCommand AddGroupCommand(string id)
+        {
+            var cmd = new GroupCommand();
+            commands.Add(id, cmd);
+            return cmd;
+        }
+
         public ILabelCommand AddLabelCommand(string id)
         {
             var cmd = new LabelCommand();
@@ -106,6 +113,20 @@ namespace AddinX.Ribbon.Implementation
         public ISeparatorCommand AddSeparatorCommand(string id)
         {
             var cmd = new SeparatorCommand();
+            commands.Add(id, cmd);
+            return cmd;
+        }
+
+        public ISplitButtonCommand AddSplitButtonCommand(string id)
+        {
+            var cmd = new SplitButtonCommand();
+            commands.Add(id, cmd);
+            return cmd;
+        }
+
+        public ITabCommand AddTabCommand(string id)
+        {
+            var cmd = new TabCommand();
             commands.Add(id, cmd);
             return cmd;
         }

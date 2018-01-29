@@ -1,0 +1,16 @@
+﻿<customUI onLoad="OnLoad" loadImage="OnLoadImage" xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="tab1" label="Internal" getVisible="GetVisible">
+        <group id="extraSettingsGroup" label="Extra settings" getVisible="GetVisible">
+          <splitButton id="extraSettingsSplitButton" size="large" getEnabled="GetEnabled" getVisible="GetVisible" tag="extraSettingsSplitButton">
+            <button id="extraSettingsOpenButton" showLabel="false" imageMso="QueryShowTable" getEnabled="GetEnabled" onAction="OnAction" tag="extraSettingsOpenButton" label="Open Settings" />
+            <menu id="extraSettingsMenu" label="Other Settings" showLabel="false" itemSize="normal" showImage="false" getEnabled="GetEnabled" tag="extraSettingsMenu">
+              <button id="extraSettingsOtherSettings2" showLabel="true" showImage="false" getEnabled="GetEnabled" getVisible="GetVisible" onAction="OnAction" tag="extraSettingsOtherSettings2" label="Setting 2" />
+            </menu>
+          </splitButton>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

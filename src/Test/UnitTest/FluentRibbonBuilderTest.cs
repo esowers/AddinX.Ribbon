@@ -451,5 +451,58 @@ namespace AddinX.Ribbon.UnitTest
             // Assert
             Assert.AreEqual(expected, str);
         }
+
+
+        [Test]
+        public void GroupWithSplitButton()
+        {
+            // Prepare
+            var expected = XDocument.Load("Sample/GroupWithSplitButton.xml").ToString();
+
+            builder.CustomUi.Ribbon.Tabs(c =>
+            {
+                c.AddTab("Internal").SetId("tab1")
+                    .Groups(g =>
+                    {
+                        g.AddGroup("Extra settings").SetId("extraSettingsGroup")
+                            .Items(i =>
+                            {
+                                i.AddSplitButton("Add Input")
+                                    .SetId("extraSettingsSplitButton")
+                                    .LargeSize()
+                                    .AddButton("Open Settings",
+                                                button =>
+                                                    button
+                                                        .SetId("extraSettingsOpenButton")
+                                                        .ImageMso("QueryShowTable")
+                                                    )
+                                    .AddMenu("Other Settings",
+                                                menu =>
+                                                    menu
+                                                        .SetId("extraSettingsMenu")
+                                                        .HideLabel()
+                                                        .NoImage()
+                                                        .ItemNormalSize()
+                                                        .AddItems(items =>
+                                                        {
+                                                            items.AddButton("Setting 2")
+                                                                .SetId("extraSettingsOtherSettings2")
+                                                                .NoImage()
+                                                                .ShowLabel();
+                                                        })
+                                                );
+
+                            });
+                    });
+
+            });
+
+
+            // Act
+            var str = builder.GetXmlString();
+
+            // Assert
+            Assert.AreEqual(expected, str);
+        }
     }
 }

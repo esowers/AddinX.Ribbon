@@ -1,7 +1,7 @@
 <customUI onLoad="OnLoad" loadImage="OnLoadImage" xmlns="http://schemas.microsoft.com/office/2009/07/customui">
   <ribbon startFromScratch="false">
     <tabs>
-      <tab id="tab1" label="test">
+      <tab id="tab1" label="test" getVisible="GetVisible">
         <group id="reportingGroup" label="reporting" getVisible="GetVisible">
           <box id="ButtonsVertical" getVisible="GetVisible" boxStyle="vertical">
             <button id="portfolioAllocation" label="Allocation" showLabel="false" imageMso="HappyFace" size="large" getEnabled="GetEnabled" getVisible="GetVisible" onAction="OnAction" tag="portfolioAllocation" />

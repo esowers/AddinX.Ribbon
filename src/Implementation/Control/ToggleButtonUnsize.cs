@@ -5,14 +5,14 @@ namespace AddinX.Ribbon.Implementation.Control
 {
     public class ToggleButtonUnsize : Control, IToggleButtonUnsize
     {
-        private bool imageVisible;
-        private string imageMso;
-        private string imagePath;
-        private bool showLabel;
-        private string description;
-        private string supertip;
-        private string screentip;
-        private string keytip;
+        protected bool imageVisible;
+        protected string imageMso;
+        protected string imagePath;
+        protected bool showLabel;
+        protected string description;
+        protected string supertip;
+        protected string screentip;
+        protected string keytip;
 
         public ToggleButtonUnsize()
         {

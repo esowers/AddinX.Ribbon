@@ -20,6 +20,8 @@ namespace AddinX.Ribbon.Contract.Command
 
         ISeparatorCommand AddSeparatorCommand(string id);
 
+        ISplitButtonCommand AddSplitButtonCommand(string id);
+
         IToggleButtonCommand AddToggleButtonCommand(string id);
 
         IMenuCommand AddMenuCommand(string id);
@@ -29,6 +31,10 @@ namespace AddinX.Ribbon.Contract.Command
         IButtonGroupCommand AddButtonGroupCommand(string id);
 
         IDialogBoxLauncherCommand AddDialogBoxLauncherCommand(string id);
+
+        IGroupCommand AddGroupCommand(string id);
+
+        ITabCommand AddTabCommand(string id);
 
         IEnumerable<string> GetListCommandNames();
 

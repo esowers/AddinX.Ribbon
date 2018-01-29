@@ -10,6 +10,7 @@ using AddinX.Ribbon.Contract.Control.Label;
 using AddinX.Ribbon.Contract.Control.Menu;
 using AddinX.Ribbon.Contract.Control.Separator;
 using AddinX.Ribbon.Contract.Control.ToggleButton;
+using AddinX.Ribbon.Contract.Control.SplitButton;
 
 namespace AddinX.Ribbon.Contract.Ribbon.Group
 {
@@ -38,5 +39,7 @@ namespace AddinX.Ribbon.Contract.Ribbon.Group
         IMenuId AddMenu(string label);
 
         IButtonGroupId AddButtonGroup();
+
+        ISplitButtonId AddSplitButton(string label);
     }
 }

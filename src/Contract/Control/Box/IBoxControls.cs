@@ -7,6 +7,7 @@ using AddinX.Ribbon.Contract.Control.EditBox;
 using AddinX.Ribbon.Contract.Control.Gallery;
 using AddinX.Ribbon.Contract.Control.Label;
 using AddinX.Ribbon.Contract.Control.Menu;
+using AddinX.Ribbon.Contract.Control.SplitButton;
 using AddinX.Ribbon.Contract.Control.ToggleButton;
 
 namespace AddinX.Ribbon.Contract.Control.Box
@@ -34,5 +35,7 @@ namespace AddinX.Ribbon.Contract.Control.Box
         IMenuId AddMenu(string label);
 
         IToggleButtonId AddToggleButton(string label);
+
+        ISplitButtonId AddSplitButton(string label);
     }
 }

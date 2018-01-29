@@ -18,6 +18,8 @@ using AddinX.Ribbon.Contract.Control.Menu;
 using AddinX.Ribbon.Contract.Control.MenuSeparator;
 using AddinX.Ribbon.Contract.Control.MenuUnsize;
 using AddinX.Ribbon.Contract.Control.Separator;
+using AddinX.Ribbon.Contract.Control.SplitButton;
+using AddinX.Ribbon.Contract.Control.SplitButtonUnsize;
 using AddinX.Ribbon.Contract.Control.ToggleButton;
 using AddinX.Ribbon.Contract.Control.ToggleButtonUnsize;
 using AddinX.Ribbon.Contract.Ribbon.Group;
@@ -27,7 +29,8 @@ namespace AddinX.Ribbon.Implementation.Ribbon
 {
     public class Controls : AddInList, IGroupControls, IGalleryControls, IMenuControls
         , IDropDownControls, IGalleryUnsizeControls, IMenuUnsizeControls,
-        IGroupDialogBox, IButtonGroupControls, IBoxControls
+        IGroupDialogBox, IButtonGroupControls, IBoxControls, ISplitButtonControls,
+        ISplitButtonUnsizeControls
     {
         private readonly IList<Control.Control> items;
 
@@ -42,7 +45,7 @@ namespace AddinX.Ribbon.Implementation.Ribbon
             items.Add(item);
             return item;
         }
-        
+
         public IButtonId AddButton(string label)
         {
             var item = new Button();
@@ -54,6 +57,14 @@ namespace AddinX.Ribbon.Implementation.Ribbon
         IToggleButtonUnsizeId IButtonGroupControls.AddToggleButton(string label)
         {
             var item = new ToggleButtonUnsize();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        ISplitButtonUnsizeId IButtonGroupControls.AddSplitButton(string label)
+        {
+            var item = new SplitButtonUnsize();
             item.SetLabel(label);
             items.Add(item);
             return item;
@@ -74,7 +85,7 @@ namespace AddinX.Ribbon.Implementation.Ribbon
             items.Add(item);
             return item;
         }
-        
+
         IMenuUnsizeId IMenuUnsizeControls.AddMenu(string label)
         {
             var item = new MenuUnsize();
@@ -91,6 +102,21 @@ namespace AddinX.Ribbon.Implementation.Ribbon
             return item;
         }
 
+        ISplitButtonUnsizeId IMenuControls.AddSplitButton(string label)
+        {
+            var item = new SplitButtonUnsize();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        ISplitButtonUnsizeId IMenuUnsizeControls.AddSplitButton(string label)
+        {
+            var item = new SplitButtonUnsize();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
 
         IToggleButtonUnsizeId IMenuUnsizeControls.AddToggleButton(string label)
         {
@@ -232,6 +258,14 @@ namespace AddinX.Ribbon.Implementation.Ribbon
             items.Add(item);
             return item;
         }
+        
+        public ISplitButtonId AddSplitButton(string label)
+        {
+            var item = new SplitButton();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
 
         protected internal override XElement[] ToXml(XNamespace ns)
         {
@@ -268,6 +302,54 @@ namespace AddinX.Ribbon.Implementation.Ribbon
         IButtonUnsizeId IGalleryUnsizeControls.AddButton(string label)
         {
             var item = new ButtonUnsize();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        IButtonUnsize ISplitButtonControls.AddButton(string label)
+        {
+            var item = new ButtonUnsizeSplitButton();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        IToggleButtonUnsize ISplitButtonControls.AddToggleButton(string label)
+        {
+            var item = new ToggleButtonUnsizeSplitButton();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        IMenuUnsize ISplitButtonControls.AddMenu(string label)
+        {
+            var item = new MenuUnsizeSplitButton();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        IButtonUnsize ISplitButtonUnsizeControls.AddButton(string label)
+        {
+            var item = new ButtonUnsizeSplitButton();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        IToggleButtonUnsize ISplitButtonUnsizeControls.AddToggleButton(string label)
+        {
+            var item = new ToggleButtonUnsizeSplitButton();
+            item.SetLabel(label);
+            items.Add(item);
+            return item;
+        }
+
+        IMenuUnsize ISplitButtonUnsizeControls.AddMenu(string label)
+        {
+            var item = new MenuUnsizeSplitButton();
             item.SetLabel(label);
             items.Add(item);
             return item;

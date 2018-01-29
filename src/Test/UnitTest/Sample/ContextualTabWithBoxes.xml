@@ -2,7 +2,7 @@
   <ribbon startFromScratch="false">
     <contextualTabs>
       <tabSet idMso="TabSetPivotTableTools">
-          <tab id="tab1" label="Portfolio">
+          <tab id="tab1" label="Portfolio" getVisible="GetVisible">
             <group id="reportingGroup" label="reporting" getVisible="GetVisible">
               <button id="portfolioAllocation" label="Allocation" showLabel="false" imageMso="HappyFace" size="large" getEnabled="GetEnabled" getVisible="GetVisible" onAction="OnAction" tag="portfolioAllocation" />
               <button id="Contributor" label="Contributor" showLabel="true" showImage="false" size="normal" getEnabled="GetEnabled" getVisible="GetVisible" onAction="OnAction" tag="Contributor" screentip="Display the top / bottom X contributor to the portfolio performance." supertip="Portfolio best contributor" />

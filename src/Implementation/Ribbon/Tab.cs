@@ -59,6 +59,7 @@ namespace AddinX.Ribbon.Implementation.Ribbon
             var element = new XElement(ns + ElementName
                 , new XAttribute(tmpId.Type.ToString(), tmpId.Value)
                 , new XAttribute("label", label)
+                , new XAttribute("getVisible", "GetVisible")
                 );
             if (!string.IsNullOrEmpty(keytip))
             {

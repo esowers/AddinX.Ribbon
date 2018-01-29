@@ -8,17 +8,17 @@ namespace AddinX.Ribbon.Implementation.Control
 {
     public class MenuUnsize : Control, IMenuUnsize
     {
-        private string imageMso;
-        private string imagePath;
-        private bool imageVisible;
-        private string supertip;
-        private string screentip;
-        private string keytip;
-        private string description;
-        private bool showLabel = true;
-        private ControlSize itemSize = ControlSize.normal;
+        protected string imageMso;
+        protected string imagePath;
+        protected bool imageVisible;
+        protected string supertip;
+        protected string screentip;
+        protected string keytip;
+        protected string description;
+        protected bool showLabel = true;
+        protected ControlSize itemSize = ControlSize.normal;
 
-        private readonly IMenuUnsizeControls controls;
+        protected readonly IMenuUnsizeControls controls;
 
         public MenuUnsize()
         {

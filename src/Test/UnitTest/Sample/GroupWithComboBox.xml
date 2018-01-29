@@ -2,7 +2,7 @@
   <ribbon startFromScratch="false">
     <contextualTabs>
       <tabSet idMso="TabSetPivotTableTools">
-        <tab id="tab1" label="Internal">
+        <tab id="tab1" label="Internal" getVisible="GetVisible">
           <group id="extraSettingsGroup" label="Extra settings" getVisible="GetVisible">
             <comboBox id="colorsPicking" label="Colors" maxLength="15" sizeString="WWWWWWWWWWWWWWW" showLabel="true" showItemImage="false" showImage="false" getEnabled="GetEnabled" getVisible="GetVisible" onChange="OnChange" getText="GetText" tag="colorsPicking" supertip="Color Picking">
               <item id="greenColor" label="Green" />

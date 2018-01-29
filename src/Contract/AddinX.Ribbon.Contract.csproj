@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AddinX.Ribbon.Contract</RootNamespace>
     <AssemblyName>AddinX.Ribbon.Contract</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -82,6 +83,8 @@
     <Compile Include="Command\IGalleryCommand.cs" />
     <Compile Include="Command\IGroupCommand.cs" />
     <Compile Include="Command\IMenuCommand.cs" />
+    <Compile Include="Command\ISplitButtonCommand.cs" />
+    <Compile Include="Command\ITabCommand.cs" />
     <Compile Include="Control\Box\IBoxId.cs" />
     <Compile Include="Control\Box\IBoxItems.cs" />
     <Compile Include="Control\Box\IBoxStyle.cs" />
@@ -160,6 +163,21 @@
     <Compile Include="Control\Menu\IMenuItemSize.cs" />
     <Compile Include="Control\Menu\IMenuLabel.cs" />
     <Compile Include="Control\Menu\IMenuSize.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsize.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsizeButton.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsizeControls.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsizeExtra.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsizeId.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsizeItems.cs" />
+    <Compile Include="Control\SplitButtonUnsize\ISplitButtonUnsizeMenu.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonButton.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonControls.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonExtra.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonId.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonItems.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonMenu.cs" />
+    <Compile Include="Control\SplitButton\ISplitButtonSize.cs" />
+    <Compile Include="Control\SplitButton\ISplitButton.cs" />
     <Compile Include="Control\ToggleButtonUnsize\IToggleButtonUnsizeExtra.cs" />
     <Compile Include="Control\ToggleButtonUnsize\IToggleButtonUnsizeId.cs" />
     <Compile Include="Control\ToggleButtonUnsize\IToggleButtonUnsizeImage.cs" />

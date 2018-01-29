@@ -2,6 +2,7 @@ using AddinX.Ribbon.Contract.Control.ButtonUnsize;
 using AddinX.Ribbon.Contract.Control.CheckBox;
 using AddinX.Ribbon.Contract.Control.GalleryUnsize;
 using AddinX.Ribbon.Contract.Control.MenuSeparator;
+using AddinX.Ribbon.Contract.Control.SplitButtonUnsize;
 using AddinX.Ribbon.Contract.Control.ToggleButtonUnsize;
 
 namespace AddinX.Ribbon.Contract.Control.MenuUnsize
@@ -19,5 +20,7 @@ namespace AddinX.Ribbon.Contract.Control.MenuUnsize
         IMenuUnsizeId AddMenu(string label);
 
         IMenuSeparatorId AddSeparator(string title);
+
+        ISplitButtonUnsizeId AddSplitButton(string label);
     }
 }

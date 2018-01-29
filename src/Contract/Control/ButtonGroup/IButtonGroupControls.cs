@@ -1,6 +1,7 @@
 using AddinX.Ribbon.Contract.Control.ButtonUnsize;
 using AddinX.Ribbon.Contract.Control.GalleryUnsize;
 using AddinX.Ribbon.Contract.Control.MenuUnsize;
+using AddinX.Ribbon.Contract.Control.SplitButtonUnsize;
 using AddinX.Ribbon.Contract.Control.ToggleButtonUnsize;
 
 namespace AddinX.Ribbon.Contract.Control.ButtonGroup
@@ -14,5 +15,7 @@ namespace AddinX.Ribbon.Contract.Control.ButtonGroup
         IGalleryUnsizeId AddGallery(string label);
 
         IMenuUnsizeId AddMenu(string label);
+
+        ISplitButtonUnsizeId AddSplitButton(string label);
     }
 }
